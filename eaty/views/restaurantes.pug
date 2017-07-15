@@ -1,0 +1,40 @@
+extends layout
+block content
+  .container
+       .row
+         .col.s12
+           .divider
+          
+           table
+             thead
+               tr
+                 th nombre
+                 th tipo de restaurante 
+                 th valoracion
+                 th direccion
+                 th rango de precios
+                 th telefono
+             tbody
+               each restaurante in restaurantes
+                 tr
+                   td= restaurante.nombre
+                   td= restaurante.tipo_restaurante
+                   td= restaurante.valoracion
+                   td= restaurante.direccion
+                   td= restaurante.rango_precios
+                   td= restaurante.telefono
+                   
+                   
+                   td 
+                            
+                            
+                            a.waves-effect.waves-light.btn(href="editar/" + restaurante.id)
+                              i.material-icons.right.small mode_edit
+                              | Editar
+                            
+                            a.waves-effect.waves-light.btn(href="delete/"+restaurante.id)
+                                i.material-icons.right.small delete
+                                | Borrar
+
+                            
+                          

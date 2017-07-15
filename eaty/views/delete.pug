@@ -1,0 +1,12 @@
+extends layout
+block content
+
+
+    h1   Eliminar 
+      span=restaurante.nombre
+                   form(action = "/delete/"+ restaurante.id  +"?_method=DELETE",method ="post")
+                       div(class="form-group") 
+                           label
+                              h1 Confirmar?
+                       div(class="form-group text-right")    
+                           input(type="submit" class="btn btn-info" value="BORRAR") 
